@@ -1,6 +1,7 @@
 package Collections.c31.task3112;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,7 +32,7 @@ https://pacemook.com/photos/image1.jpg
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        Path passwords = downloadFile("https://javarush.ru/testdata/secretPasswords.txt", Paths.get("D:/MyDownloads"));
+        Path passwords = downloadFile("https://yastatic.net/morda-logo/i/citylogos/yandex19-logo-ru.png", Paths.get("C:\\prog\\SolutionTest"));
 
         for (String line : Files.readAllLines(passwords)) {
             System.out.println(line);
@@ -40,5 +41,16 @@ public class Solution {
 
     public static Path downloadFile(String urlString, Path downloadDirectory) throws IOException {
         // implement this method
+        URL url = new URL(urlString);
+        InputStream inputStream = url.openStream();
+
+        Path tempFile = Files.createTempFile("temp-",".tmp");
+        Files.copy(inputStream, tempFile);
+
+        String fileName = urlString.substring(urlString.lastIndexOf("/"));
+        Path path = Paths.get(downloadDirectory.toString() + fileName);
+        Files.move(tempFile,path);
+
+        return path;
     }
 }
