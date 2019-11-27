@@ -4,6 +4,6 @@ public enum SnakeDirection {
     UP,
     RIGHT,
     DOWN,
-    EFT
+    LEFT
 
 }
