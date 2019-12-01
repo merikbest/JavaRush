@@ -81,7 +81,7 @@ public class Room {
                     snake.setDirection(SnakeDirection.DOWN);
             }
 
-            snake.move();   //двигаем змею
+               //двигаем змею
             print();        //отображаем текущее состояние игры
             sleep();        //пауза между ходами
         }
