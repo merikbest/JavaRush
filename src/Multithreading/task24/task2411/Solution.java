@@ -25,7 +25,7 @@ public class Solution extends C {
     private A a = new A() {
         { //у анонимных классов нет своих конструкторов, но что-то можно сделать в блоке инициализации класса
             value = "Y";
-            if (super.getClass().getName().contains(".Solution$")) {
+            if (super.getClass().getName().contains("")) {
                 System.out.print(value);
             }
         }

@@ -15,5 +15,6 @@
     <orderEntry type="library" name="com.google.guava:guava:28.1-jre" level="project" />
     <orderEntry type="library" name="org.apache.commons:commons-collections4:4.4" level="project" />
     <orderEntry type="library" name="org.junit.vintage:junit-vintage-engine:4.12.0" level="project" />
+    <orderEntry type="library" name="jsoup-1.12.1-javadoc" level="project" />
   </component>
 </module>
